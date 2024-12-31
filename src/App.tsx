@@ -1,13 +1,27 @@
 import React from "react";
 import "./App.css";
-import FetchUsers from "./components/list.component.tsx";
-import GetRequest from "./components/textbox.component.tsx";
-import MyList from "./components/mylist.component.tsx";
+import Main from "./components/main.component.tsx";
+import { Employee } from "./components/class.component.tsx";
+import { MyPerson } from "./components/personclass.component.tsx";
 
 function App() {
+  const myperson = new MyPerson(1, "Mihai", "S", "emaili@asdf.com");
+
+  console.log(myperson);
+
+  console.log(myperson.sayHello());
+  // const employee = new Employee(
+  //   1,
+  //   "John Doe",
+  //   "john.doe@example.com",
+  //   "Software Engineer"
+  // );
+
+  // console.log(employee.getDetails());
+
   return (
     <div className="App">
-      <MyList />
+      <Main />
     </div>
   );
 }
